@@ -27,7 +27,7 @@ public class Info extends classesExec.MudaTema {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de Informações - Lovelace");
+        setTitle("Tela de Informações - Chac II");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 102));
@@ -39,7 +39,7 @@ public class Info extends classesExec.MudaTema {
         jTextArea1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(1);
-        jTextArea1.setText("Olá, seja bem vindo ao novo software de comunicação Team Lovelace!\n\nEste é um espaço onde você pode bater um papo com seus amigos e familiares, de uma forma descontraída e divertida. \n\nNeste aplicativo, temos suporte ao envio de arquivos, mensagens de atenção e até enviar emoji's. \n\nPara usar o Team Lovelace basta você criar um servidor e depois chamar a galera para se conectar. Lembrando que ele só funciona caso os usuários estejam na mesma rede.\n\nEste sistema de comunicação utiliza um socket promovendo comunicação entre a fonte e o destino através do protocolo TCP/IP.\n\n-> Criar um servidor para que possa servir de base para a comunicação e guardar as informações de IP local e privado;\n\n-> Logo após, se cadastrar como um cliente, para isso, terá que usar as informações que foram guardadas anteriormente e dar um nome para este chat.\n\n-> Passar estas informações para os outros usuários poderem se comunicar;\n\n-> Pronto, seu chat já está devidamente configurado e agora podem conversar, aproveitem!\n\n======================================\n\nEste Software está sob a licença GNU  General Public License version 3.0");
+        jTextArea1.setText("Olá, seja bem vindo ao novo software de comunicação Chacara!\n\nEste é um espaço onde você pode bater um papo com seus amigos e familiares, de uma forma descontraída e divertida. \n\nNeste aplicativo, temos suporte ao envio de arquivos, mensagens de atenção e até enviar emoji's. \n\nPara usar o Chacara basta você criar um servidor e depois chamar a galera para se conectar. Lembrando que ele só funciona caso os usuários estejam na mesma rede.\n\nEste sistema de comunicação utiliza um socket promovendo comunicação entre a fonte e o destino através do protocolo TCP/IP.\n\n-> Criar um servidor para que possa servir de base para a comunicação e guardar as informações de IP local e privado;\n\n-> Logo após, se cadastrar como um cliente, para isso, terá que usar as informações que foram guardadas anteriormente e dar um nome para este chat.\n\n-> Passar estas informações para os outros usuários poderem se comunicar;\n\n-> Pronto, seu chat já está devidamente configurado e agora podem conversar, aproveitem!\n\n======================================\n\nEste Software está sob a licença GNU  General Public License version 3.0");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setBorder(null);
         jTextArea1.setCaretColor(new java.awt.Color(255, 204, 102));

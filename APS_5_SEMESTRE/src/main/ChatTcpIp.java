@@ -1,11 +1,10 @@
 package main;
-
 import Telas.inicial;
 
 
 public class ChatTcpIp {
     
-    //Classe main para rodar tudo
+    //Classe main, programa para rodar a aplicação
 
     /**
      * @param args the command line arguments

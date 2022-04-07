@@ -1,6 +1,5 @@
 package classesExec;
 
-import Enum.ComandoEnum;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,13 +13,11 @@ import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import Enum.ComandoEnum;
 
 /**
  *
@@ -193,7 +190,8 @@ public class ServidoresSockets {
                             //Pega o tamnho do arquivo
                             byte[] fileBytes = new byte[(int)file.length()];
                             FileInputStream fileInputStream = new FileInputStream(file);
-                            BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
+                            @SuppressWarnings("resource")
+							BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
                             bufferedInputStream.read(fileBytes, 0, fileBytes.length);
                             ObjectOutputStream objectOutputStream = new ObjectOutputStream(client.getOutputStream());
                             objectOutputStream.writeObject(new FileDownload(ComandoEnum.FILEDOWNLOAD, null, fileBytes));

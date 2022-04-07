@@ -300,7 +300,7 @@ public class ClienteScreen extends classesExec.MudaTema {
             //Se a variavel for vazia, é mantido o valor já existente no textField
             this.jTextFieldMessage.setText(jTextFieldMessage.getText());
         } else {
-            //Caso a veriavel não seja vazia será setado no textField o valor já existente mais o valor da variavel
+        	//Caso a veriavel não seja vazia será setado no textField o valor já existente mais o valor da variavel
             this.jTextFieldMessage.setText(jTextFieldMessage.getText() + Emoji.getEmojiChat());
         }
          //Limpando a variavel emoji
@@ -335,7 +335,7 @@ public class ClienteScreen extends classesExec.MudaTema {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jListClientesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListClientesValueChanged
-        //Escolhe o ID para qual a mensagem é enviada através do clique do usuário na lista de
+        //Escolhe o ID para qual a mensagem ï¿½ enviada atravï¿½s do clique do usuï¿½rio na lista de
         //outros clientes (outros IDs)
         int antigoIdParaMensagem = this.idSelecionadoDaListaClientes;
         if (jListClientes.getSelectedIndex() == 0)
@@ -357,7 +357,7 @@ public class ClienteScreen extends classesExec.MudaTema {
     }//GEN-LAST:event_jListClientesValueChanged
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        //Executa o método mudacor em todas as telas
+        //Executa o mï¿½todo mudacor em todas as telas
         cor = !cor;
         //setCor();
         this.mudaCor();
@@ -428,13 +428,13 @@ public class ClienteScreen extends classesExec.MudaTema {
         listaClientes.removeElement(pegarTextoParaCampoDeMensagens(infoCliente));
     }
     
-    //Registra o título da janela do cliente que está usando a janela
+    //Registra o título da janela do cliente que estiver usando a janela
     public void registrarAMim(InformacoesCliente infoCliente) {
         this.informacoesCliente.setId(infoCliente.getId());
         this.setTitle("Cliente - (" + this.informacoesCliente.getId() + ") " + this.informacoesCliente.getNome());
     }
 
-    //Notificação de quando o server para/da problema/seja fechado
+    //Notificaï¿½ï¿½o de quando o server para/da problema/seja fechado
     public void desconectarAMim() {
         JOptionPane.showMessageDialog(null, "O servidor foi desconectado, retornando a tela de login.", "O servidor parou", JOptionPane.ERROR_MESSAGE);
         this.dispose();

@@ -67,7 +67,7 @@ public class ServidorScreen extends classesExec.MudaTema {
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/LogoLovelace-1.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/LogoChacara-1.png"))); // NOI18N
 
         jButton2.setBackground(new java.awt.Color(255, 204, 102));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/LampadaIcon30x30Preto.png"))); // NOI18N

@@ -216,7 +216,7 @@ public class inicial extends classesExec.MudaTema {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        //Executa o método mudacor em todas as telas
+        //Executa o mï¿½todo mudacor em todas as telas
         setCor();
         if(cadCli != null){
             cadCli.mudaCor();
@@ -243,7 +243,7 @@ public class inicial extends classesExec.MudaTema {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         try{
-            java.awt.Desktop.getDesktop().browse( new java.net.URI( "https://github.com/fernandoSantello/APS_Redes_5_Semestre" ) );
+            java.awt.Desktop.getDesktop().browse( new java.net.URI( "https://github.com/emmnesty/APS-Redes-5-Semestre" ) );
         }
         catch(Exception e){
             

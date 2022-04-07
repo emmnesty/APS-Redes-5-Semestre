@@ -68,13 +68,13 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
         jTextFieldIpPublicoServidor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jLabel3.setText("IP Público do servidor:");
+        jLabel3.setText("IP Publico do servidor:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel4.setText("IP Local do servidor:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jLabel5.setText("Seu IP Público:");
+        jLabel5.setText("Seu IP Publico:");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel6.setText("Seu IP Local:");
@@ -88,7 +88,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
         jTextFieldIpLocalServidor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jTextFieldIpLocalServidor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/LogoLovelace-1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/LogoChacara-1.png"))); // NOI18N
 
         jButton2.setBackground(new java.awt.Color(31, 135, 235));
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -116,7 +116,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
 
         jCheckBoxCliente.setBackground(new java.awt.Color(255, 204, 102));
         jCheckBoxCliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jCheckBoxCliente.setText("Preencher automático");
+        jCheckBoxCliente.setText("Preencher automatico");
         jCheckBoxCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxClienteActionPerformed(evt);
@@ -271,14 +271,14 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
     
     private void jCheckBoxClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxClienteActionPerformed
         
-        //Pega o valor do IP público e local e preenche automaticamente os campos
+        //Pega o valor do IP pï¿½blico e local e preenche automaticamente os campos
         if (jCheckBoxCliente.isSelected()) {
             jTextFieldIpPublicoCliente.setText(ipPublico);
             jTextFieldIpPublicoCliente.setEnabled(false);
             jTextFieldIpLocalCliente.setText(ipLocal);
             jTextFieldIpLocalCliente.setEnabled(false);
 
-        //Else habilita os campos para serem preenchidos pelo usuário
+        //Else habilita os campos para serem preenchidos pelo usuï¿½rio
         }else{
             jTextFieldIpPublicoCliente.setText("");
             jTextFieldIpPublicoCliente.setEnabled(true);
@@ -289,7 +289,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
     }//GEN-LAST:event_jCheckBoxClienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //Verifica se os IPs estão corretos e conecta com o servidor caso estejam
+        //Verifica se os IPs estï¿½o corretos e conecta com o servidor caso estejam
         if (isValidLogin()) {
         InformacoesCliente infoCliente = new InformacoesCliente(0, jTextFieldIpPublicoCliente.getText(), jTextFieldIpLocalCliente.getText(), jTextFieldNome.getText());
                 infoCliente.setIpPublicoServidor(jTextFieldIpPublicoServidor.getText());
@@ -304,7 +304,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
                     this.dispose();
                     cliente.setVisible(true);
                 } catch (IOException error) {
-                    JOptionPane.showMessageDialog(null, "Servidor não encontrado, verifique se os dados estão corretos.", "Servidor não encontrado", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Servidor nÃ£o encontrado, verifique se os dados estÃ£o corretos.", "Servidor nï¿½o encontrado", JOptionPane.ERROR_MESSAGE);
                 }
          }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -315,7 +315,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //Executa o método mudacor em todas as telas
+        //Executa o mï¿½todo mudacor em todas as telas
         setCor();
         if(cadCli != null){
             cadCli.mudaCor();
@@ -392,7 +392,7 @@ public class Cadastra_Cliente extends classesExec.MudaTema {
     private javax.swing.JTextField jTextFieldNome;
     // End of variables declaration//GEN-END:variables
 
-//Pega o IP locar através do iNetAddress
+//Pega o IP locar atravï¿½s do iNetAddress
 private String getIPLocal() {
         try {
             InetAddress iNetAddress = InetAddress.getLocalHost();
@@ -402,7 +402,7 @@ private String getIPLocal() {
         }
         return null;
     }
-//Confere se o IP inserido é um IP válido
+//Confere se o IP inserido ï¿½ um IP vï¿½lido
     public static boolean validIP (String ip) {
     try {
         if ( ip == null || ip.isEmpty() ) {
@@ -431,7 +431,7 @@ private String getIPLocal() {
 }
 
     
-    //Pega o IP público atrvés de sites
+    //Pega o IP pï¿½blico atrvï¿½s de sites
     private String getIPPublico() {
         String[] urls = { "http://checkip.amazonaws.com/", "https://myexternalip.com/raw", "https://ipecho.net/plain" };
         String ip = null;
@@ -441,35 +441,35 @@ private String getIPLocal() {
                 BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
                 ip = in.readLine();
             } catch (MalformedURLException error) {
-                JOptionPane.showMessageDialog(null, error.getCause().toString() + " - " + error.getMessage(), "Erro ao recuperar IP Público", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, error.getCause().toString() + " - " + error.getMessage(), "Erro ao recuperar IP Pï¿½blico", JOptionPane.ERROR_MESSAGE);
             } catch (IOException error) {
-                JOptionPane.showMessageDialog(null, error.getCause().toString() + " - " + error.getMessage(), "Erro ao recuperar IP Público", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, error.getCause().toString() + " - " + error.getMessage(), "Erro ao recuperar IP Pï¿½blico", JOptionPane.ERROR_MESSAGE);
             }
         }
         return ip;
     }
       
-    //Faz as verificações necessárias para ver se os IPs inseridos são validos
+    //Faz as verificaï¿½ï¿½es necessï¿½rias para ver se os IPs inseridos sï¿½o validos
     private boolean isValidLogin() {
         StringBuilder builder = new StringBuilder();
         if (jTextFieldIpPublicoServidor.getText() == null || jTextFieldIpPublicoServidor.getText().trim().isEmpty())
-            builder.append("IP público do servidor não pode ser vazio.\n");
+            builder.append("IP publico do servidor nÃ£o pode ser vazio.\n");
         if (jTextFieldIpLocalServidor.getText() == null || jTextFieldIpLocalServidor.getText().trim().isEmpty())
-            builder.append("IP local do servidor não pode ser vazio.\n");
+            builder.append("IP local do servidor nÃ£o pode ser vazio.\n");
         if (jTextFieldIpPublicoCliente.getText() == null || jTextFieldIpPublicoCliente.getText().trim().isEmpty())
-            builder.append("IP público do cliente não pode ser vazio.\n");
+            builder.append("IP publico do cliente nÃ£o pode ser vazio.\n");
         if (jTextFieldIpLocalCliente.getText() == null || jTextFieldIpLocalCliente.getText().trim().isEmpty())
-            builder.append("IP local do cliente não pode ser vazio.\n");
+            builder.append("IP local do cliente nÃ£o pode ser vazio.\n");
         if (jTextFieldNome.getText() == null || jTextFieldNome.getText().trim().isEmpty())
-            builder.append("Nome no chat não pode ser vazio.\n");
+            builder.append("Nome no chat nÃ£o pode ser vazio.\n");
         if (validIP(jTextFieldIpPublicoCliente.getText()) == false)
-            builder.append("IP público do cliente é inválido.\n");
+            builder.append("IP publico do cliente Ã© invÃ¡lido.\n");
         if (validIP(jTextFieldIpLocalCliente.getText()) == false)
-            builder.append("IP local do cliente é inválido.\n");
+            builder.append("IP local do cliente Ã© invÃ¡lido.\n");
         
         
         if (!builder.toString().isEmpty())
-            JOptionPane.showMessageDialog(null, builder.toString(), "Existem erros de validação.", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, builder.toString(), "Existem erros de validaÃ§Ã£o.", JOptionPane.ERROR_MESSAGE);
         
         return builder.toString().isEmpty();
     }
