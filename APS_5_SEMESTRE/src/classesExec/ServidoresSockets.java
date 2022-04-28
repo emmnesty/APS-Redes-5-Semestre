@@ -19,31 +19,22 @@ import java.util.List;
 
 import Enum.ComandoEnum;
 
-/**
- *
- * @author Fer-sama
- * @author Isa-chan
- * @author Perigo-kun
- * @author Lucas-san
- * @author Japa-kouhai
- * 
- */
 
 public class ServidoresSockets {
     //Atributos da classe
     private InformacoesServidor informacoesServidor;
     private boolean servidoresContinuemOuvindo;
-    //um server socket para cada "operaÁ„o"
+    //um server socket para cada "opera√ß√£o"
     private ServerSocket mensagensSocket;
     private ServerSocket fileUploadSocket;
     private ServerSocket fileDownloadSocket;
     private ServerSocket arrayFilesSocket;
-    //um runable para cada "operaÁ„o"
+    //um runable para cada "opera√ß√£o"
     private Runnable runnableMensagemSocket;
     private Runnable runnableFileUploadSocket;
     private Runnable runnableFileDownloadSocket;
     private Runnable runnableArrayFilesSocket;
-    //uma thread para cada operaÁ„o
+    //uma thread para cada opera√ß√£o
     private Thread threadMensagemSocket;
     private Thread threadFileUploadSocket;
     private Thread threadFileDownloadSocket;
@@ -52,7 +43,7 @@ public class ServidoresSockets {
     
     //Construtor ad classe
     public ServidoresSockets() {
-        //cria uma inst‚ncia
+        //cria uma inst√¢ncia
         this.informacoesServidor = InformacoesServidor.getInstance();
         try {
             //Pega o IP local do servidor
@@ -92,7 +83,7 @@ public class ServidoresSockets {
                     //Registra cliente no servidor
                     InformacoesCliente informacoesEuCliente = this.registrarCliente(comandoObj);
                     informacoesEuCliente.setOut(out);
-                    //Print na nova conex„o de cliente e nos IPs
+                    //Print na nova conex√£o de cliente e nos IPs
                     System.out.println("New connection from: " + informacoesEuCliente.getIpPublicoCliente() + "/" + informacoesEuCliente.getIpLocalCliente());
                     //Adiciona o cliente
                     Iterator<ObjectOutputStream> iterador = outEuEOutrosClientes.iterator();
@@ -183,8 +174,8 @@ public class ServidoresSockets {
                     try {
                         BufferedReader input = new BufferedReader(new InputStreamReader(client.getInputStream()));
                         String caminhoArquivoNoServidor;
-                        //Verifica se o caminho do arquivo no servidor È igual ao caminho do arquivo
-                        //inserido pelo usu·rio
+                        //Verifica se o caminho do arquivo no servidor √© igual ao caminho do arquivo
+                        //inserido pelo usu√°rio
                         if ((caminhoArquivoNoServidor = input.readLine()) != null) {
                             File file = new File(caminhoArquivoNoServidor);
                             //Pega o tamnho do arquivo
@@ -214,7 +205,7 @@ public class ServidoresSockets {
         this.threadFileDownloadSocket.start();
     }
     
-    //Cria o runnable as threads que ir„o passar a lista de arquivos no servidor
+    //Cria o runnable as threads que ir√£o passar a lista de arquivos no servidor
     private void arrayFilesSocketComeceAOuvir(){
         this.runnableArrayFilesSocket = () -> {
             while (servidoresContinuemOuvindo) {
@@ -226,14 +217,14 @@ public class ServidoresSockets {
                     System.out.println(e.getMessage());
                 }
                 
-                //Verifica se a conex„o retorna um cliente n„o nulo
+                //Verifica se a conex√£o retorna um cliente n√£o nulo
                 if (client != null) {
                     try {
-                        //Cria o ObjectOutputStream respons·vel por enviar oobjeto
+                        //Cria o ObjectOutputStream respons√°vel por enviar oobjeto
                         ObjectOutputStream OOS = new ObjectOutputStream(client.getOutputStream());
-                        //Recupera os nomes dos arquivos que est„o no servidor
+                        //Recupera os nomes dos arquivos que est√£o no servidor
                         String[] listArq = recuperaArquivos();
-                        //Cria objeto FileArray que ser·enviado pelo socket
+                        //Cria objeto FileArray que ser√°enviado pelo socket
                         FileArray fileArray = new FileArray(ComandoEnum.FILEDOWNLOAD, null, listArq);
                         //Envia o objeto, da um flush para garantir que todos os dados foram enviados e fecha o ObjectOutputStream
                         OOS.writeObject(fileArray);
@@ -274,7 +265,7 @@ public class ServidoresSockets {
                 System.out.println(error.getMessage());
             }
         }
-        // Torna servidoresContinuemOuvindo como false, para que o loop de while das threads se torne inv·lido
+        // Torna servidoresContinuemOuvindo como false, para que o loop de while das threads se torne inv√°lido
         // e eleas parem de rodar
         this.servidoresContinuemOuvindo = false;
         try{
@@ -287,7 +278,7 @@ public class ServidoresSockets {
         }
     }
     
-    //Remove cliente especÌfico
+    //Remove cliente espec√≠fico
     void desconectar(ObjectOutputStream outOutroCliente, InformacoesCliente cliente) {
         outEuEOutrosClientes.removeIf(c -> c.equals(outOutroCliente));
         this.informacoesServidor.removeCliente(cliente);
@@ -301,7 +292,7 @@ public class ServidoresSockets {
         File file = new File(informacoesServidor.getDiretorioArquivos());
         File[] arquivos = file.listFiles();
 
-        //Variaveis String[] que ir· grava os nomes dos arquivos
+        //Variaveis String[] que ir√° grava os nomes dos arquivos
         String[] listaArquivos = new String[arquivos.length];
 
         //Loop para gravar o nome dos arquivos na variavel String[]
