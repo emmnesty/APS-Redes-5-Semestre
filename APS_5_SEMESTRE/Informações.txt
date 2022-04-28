@@ -1,0 +1,6 @@
+regex
+enum
+classe socket
+iterador Java
+tratamento de excessões
+BufferedReader
